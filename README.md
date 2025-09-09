@@ -1,36 +1,131 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website - Senior Backend Developer
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js, TypeScript, Tailwind CSS, Framer Motion, and Three.js.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Modern Design**: Clean, professional design with smooth animations
+- **Responsive**: Fully responsive design that works on all devices
+- **Performance Optimized**: Lazy loading, optimized images, and efficient code splitting
+- **SEO Friendly**: Proper meta tags, structured data, and sitemap
+- **Interactive**: Smooth scroll animations and hover effects
+- **Three.js Integration**: Animated background with particle effects
+- **TypeScript**: Full type safety throughout the application
+- **Dark Mode Ready**: Built-in dark mode support
+
+## 🛠️ Technologies Used
+
+- **Frontend Framework**: Next.js 15.5.2
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **3D Graphics**: Three.js with React Three Fiber
+- **Icons**: Lucide React
+- **Component Library**: Radix UI (shadcn/ui)
+- **Font**: Inter, Outfit, JetBrains Mono
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── globals.css          # Global styles and custom CSS
+│   ├── layout.tsx           # Root layout with metadata
+│   └── page.tsx             # Main portfolio page
+├── components/
+│   ├── ui/                  # Reusable UI components
+│   ├── Header.tsx           # Navigation header
+│   ├── Hero.tsx             # Hero section with Three.js
+│   ├── About.tsx            # About section
+│   ├── Experience.tsx       # Experience timeline
+│   ├── Projects.tsx         # Projects showcase
+│   ├── Skills.tsx           # Skills and technologies
+│   ├── Contact.tsx          # Contact form and info
+│   ├── Footer.tsx           # Footer section
+│   ├── LazyComponent.tsx    # Lazy loading wrapper
+│   └── ScrollProgress.tsx   # Scroll progress indicator
+├── data/
+│   └── portfolio.ts         # Mock data for portfolio content
+├── hooks/
+│   └── usePortfolio.ts      # Custom React hooks
+└── lib/
+    └── utils.ts             # Utility functions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Customization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. Personal Information
+Edit the data in `src/data/portfolio.ts`:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```typescript
+export const personalInfo: PersonalInfo = {
+  name: "Your Name",
+  title: "Your Title",
+  subtitle: "Your Subtitle",
+  description: "Your description...",
+  email: "your.email@example.com",
+  // ... other fields
+};
+```
 
-## Learn More
+### 2. Experience
+Update the `experiences` array in `src/data/portfolio.ts`
 
-To learn more about Next.js, take a look at the following resources:
+### 3. Projects
+Update the `projects` array in `src/data/portfolio.ts`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4. Skills
+Update the `skills` array in `src/data/portfolio.ts`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Getting Started
 
-## Deploy on Vercel
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Installation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Run the development server:
+```bash
+npm run dev
+```
+
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Building for Production
+
+```bash
+npm run build
+npm start
+```
+
+## 📱 Responsive Design
+
+The portfolio is designed to work seamlessly across all device sizes:
+- **Desktop**: Full layout with all animations and effects
+- **Tablet**: Optimized layout with touch-friendly interactions  
+- **Mobile**: Compressed layout with mobile-optimized navigation
+
+## ⚡ Performance Features
+
+- **Lazy Loading**: Components are loaded only when needed
+- **Image Optimization**: Next.js automatic image optimization
+- **Code Splitting**: Automatic code splitting for optimal loading
+- **Caching**: Proper caching headers for static assets
+- **Minification**: CSS and JavaScript minification in production
+
+## 🎭 Animations
+
+The portfolio includes various smooth animations:
+- **Scroll Animations**: Elements animate in as you scroll
+- **Hover Effects**: Interactive hover states on all clickable elements
+- **Page Transitions**: Smooth transitions between sections
+- **Three.js Background**: Animated particle background in hero section
+- **Loading States**: Smooth loading animations for lazy-loaded content
+
+**Built with ❤️ and lots of ☕**

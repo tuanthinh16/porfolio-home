@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yourportfolio.com/sitemap.xml
+
+# Block any bot from crawling admin areas
+User-agent: *
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /api/
+
+# Allow common bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
