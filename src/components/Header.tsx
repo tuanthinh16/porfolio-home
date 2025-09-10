@@ -38,7 +38,7 @@ export default function Header() {
                         whileHover={{ scale: 1.05 }}
                         className="font-display text-2xl font-bold"
                     >
-                        <span className="text-gradient">JS</span>
+                        <span className="text-gradient">DTT</span>
                     </motion.div>
 
                     {/* Desktop Navigation */}

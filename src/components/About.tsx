@@ -68,8 +68,8 @@ export default function About() {
                         {/* Left Column - Image & Stats */}
                         <motion.div variants={itemVariants} className="space-y-8">
                             <div className="relative">
-                                <div className="w-full h-96 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                                    <div className="text-white text-6xl font-bold">TT</div>
+                                <div className="w-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                                    <img src="avt.jpg" alt="avatar" />
                                 </div>
                                 {/* Floating cards with stats */}
                                 <motion.div
@@ -78,7 +78,7 @@ export default function About() {
                                     transition={{ delay: 0.5 }}
                                     className="absolute -top-4 -left-4 bg-white dark:bg-gray-800 rounded-lg p-4 shadow-lg"
                                 >
-                                    <div className="text-2xl font-bold text-blue-600">100+</div>
+                                    <div className="text-2xl font-bold text-blue-600">50+</div>
                                     <div className="text-sm text-gray-600 dark:text-gray-300">Projects Completed</div>
                                 </motion.div>
                                 <motion.div

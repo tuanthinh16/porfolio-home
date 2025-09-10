@@ -57,7 +57,7 @@ export default function Footer() {
                             viewport={{ once: true }}
                         >
                             <h3 className="font-display text-2xl font-bold mb-4">
-                                <span className="text-gradient">{personalInfo.name}</span>
+                                <span className="text-gradient text-4xl font-title">{personalInfo.name}</span>
                             </h3>
                             <p className="font-body text-gray-300 mb-6 max-w-md">
                                 {personalInfo.subtitle}. Building scalable, high-performance backend systems

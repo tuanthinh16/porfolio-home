@@ -182,8 +182,8 @@ export default function Experience() {
                                 >
                                     <Users size={24} />
                                 </motion.div>
-                                <h3 className="font-heading text-2xl font-bold text-gray-900 dark:text-white mb-2">15+</h3>
-                                <p className="font-body text-gray-600 dark:text-gray-300">Team Members Led</p>
+                                <h3 className="font-heading text-2xl font-bold text-gray-900 dark:text-white mb-2">95%</h3>
+                                <p className="font-body text-gray-600 dark:text-gray-300">Happy Clients</p>
                             </CardContent>
                         </Card>
 
@@ -195,7 +195,7 @@ export default function Experience() {
                                 >
                                     <Code size={24} />
                                 </motion.div>
-                                <h3 className="font-heading text-2xl font-bold text-gray-900 dark:text-white mb-2">100+</h3>
+                                <h3 className="font-heading text-2xl font-bold text-gray-900 dark:text-white mb-2">50+</h3>
                                 <p className="font-body text-gray-600 dark:text-gray-300">Projects Delivered</p>
                             </CardContent>
                         </Card>

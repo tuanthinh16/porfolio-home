@@ -1,12 +1,12 @@
 // Personal Information
 export const personalInfo = {
-    name: "Tuấn Thịnh",
-    title: "Senior Backend Developer",
+    name: "Do Tuan Thinh",
+    title: "Fullstack Developer",
     subtitle: "Building Scalable & Robust Server Solutions",
-    description: "Passionate backend developer with 5+ years of experience in designing and implementing high-performance, scalable server-side applications. Specialized in microservices architecture, cloud technologies, and database optimization.",
-    email: "tuanthinh@example.com",
-    phone: "+84 (xxx) xxx-xxxx",
-    location: "Ho Chi Minh City, Vietnam",
+    description: "Backend Developer with 3+ years of experience building and scaling microservices using C#, PHP, and Python. Skilled in designing secure, high-performance systems for real-time trading (1000+ daily transactions) and healthcare platforms (serving thousands of users). Aspiring to take on system design leadership and explore blockchain integration in enterprise solutions. Dedicated to continuous learning and delivering scalable backend architectures.",
+    email: "dotuanthinh37.work@gmail.com",
+    phone: "+84 (866) 145 769",
+    location: "District 7, Ho Chi Minh City, Vietnam",
     github: "https://github.com/tuanthinh",
     linkedin: "https://linkedin.com/in/tuanthinh",
     resume: "/resume.pdf"
@@ -16,45 +16,45 @@ export const personalInfo = {
 export const experiences = [
     {
         id: "exp-1",
-        title: "Senior Backend Developer",
-        company: "TechCorp Solutions",
-        duration: "2022 - Present",
-        description: "Lead backend development for enterprise-level applications serving 1M+ users daily. Architect and implement microservices using Node.js, Python, and Go.",
-        technologies: ["Node.js", "Python", "PostgreSQL", "Redis", "Docker", "Kubernetes", "AWS"],
+        title: "Fullstack Developer",
+        company: "Trinity Net Technology",
+        duration: "06/2025 - Present",
+        description: "Built and maintained a real-time trading platform handling 10000+ daily transactions using PHP (Laravel) and microservices, and developed an e-commerce website using Next.js and Laravel serving 500+ daily users.",
+        technologies: ["PHP", "Laravel", "Python", "Rust", "JavaScript", "Node.js", "Next.js", "MySQL", "Redis", "Docker", "Prometheus", "Grafana", "GitLab CI/CD", "Nginx", "Git", "SVN"],
         achievements: [
-            "Reduced API response time by 40% through database optimization",
-            "Designed microservices architecture handling 10k+ concurrent requests",
-            "Led team of 4 developers in migrating monolith to microservices",
-            "Implemented CI/CD pipeline reducing deployment time by 60%"
+            "Built and maintained a real-time trading platform handling 10000+ daily transactions using PHP (Laravel) and microservices.",
+            "Implemented WebSocket (Node.js) for near-instant market data updates with latency under 50ms.",
+            "Contributed to a high-speed matching engine in Rust, ensuring accurate and ultra-fast order execution.",
+            "Designed a secure API Gateway (RSA, OAuth2/JWT, API key, rate limiting) to protect system access.",
+            "Automated deployments with Docker, reducing release overhead and improving stability.",
+            "Established monitoring with Prometheus & Grafana to maintain 99.99% uptime in production.",
+            "Developed an e-commerce website using Next.js and Laravel, serving 500+ daily users with responsive design and efficient backend integration."
         ]
     },
     {
         id: "exp-2",
-        title: "Backend Developer",
-        company: "StartupHub Inc.",
-        duration: "2020 - 2022",
-        description: "Developed RESTful APIs and real-time systems for fintech applications. Worked with event-driven architecture and message queues.",
-        technologies: ["Java", "Spring Boot", "MySQL", "RabbitMQ", "Jenkins", "Docker"],
+        title: "C# Developer",
+        company: "Vietsens",
+        duration: "03/2024 - 02/2025",
+        description: "Developed backend microservices in C#/.NET for hospital platforms serving 10,000+ daily users across major hospitals (Bệnh viện Chợ Rẫy, Bệnh viện Đại học Y Dược, etc.).",
+        technologies: ["C#", ".NET", "Oracle", "PL/SQL", "DevExpress", "Git", "SVN"],
         achievements: [
-            "Built payment processing system handling $2M+ monthly transactions",
-            "Implemented real-time notification system using WebSockets",
-            "Optimized database queries reducing execution time by 50%",
-            "Developed automated testing suite with 95% code coverage"
+            "Developed backend microservices in C#/.NET for hospital platforms serving 10,000+ daily users across major hospitals (Bệnh viện Chợ Rẫy, Bệnh viện Đại học Y Dược, etc.).",
+            "Integrated with HIS/LIS systems, ensuring compatibility with existing healthcare workflows and standards.",
+            "Designed reporting dashboards with DevExpress & Oracle to support real-time decision making in hospital departments.",
+            "Optimized performance for large-scale hospital deployments, ensuring stability during high patient load."
         ]
-    },
+    }
+];
+
+// Education Data
+export const education = [
     {
-        id: "exp-3",
-        title: "Junior Backend Developer",
-        company: "WebSolutions Ltd.",
-        duration: "2019 - 2020",
-        description: "Contributed to e-commerce platform development. Focused on inventory management and order processing systems.",
-        technologies: ["PHP", "Laravel", "MySQL", "Redis", "Git", "Linux"],
-        achievements: [
-            "Developed inventory management API serving 50+ clients",
-            "Created automated backup system with 99.9% reliability",
-            "Implemented caching layer reducing database load by 30%",
-            "Collaborated with frontend team on API integration"
-        ]
+        id: "edu-1",
+        degree: "Bachelor of Information Technology",
+        institution: "Danang Architecture University",
+        duration: "08/2018 - 02/2022",
+        description: "Specialized in software engineering, algorithms, and database systems."
     }
 ];
 
@@ -62,10 +62,10 @@ export const experiences = [
 export const projects = [
     {
         id: "proj-1",
-        title: "E-Commerce Microservices Platform",
+        title: "E-Commerce Platform",
         description: "Scalable e-commerce backend with microservices architecture",
         longDescription: "A comprehensive e-commerce platform built with microservices architecture, featuring user management, product catalog, order processing, payment integration, and inventory management. Designed to handle high traffic and scale horizontally.",
-        technologies: ["Node.js", "Express", "PostgreSQL", "Redis", "Docker", "Kubernetes", "RabbitMQ"],
+        technologies: ["Nextjs", "tailwind", "Mysql", "Php"],
         features: [
             "Microservices architecture with API Gateway",
             "Real-time inventory synchronization",
@@ -74,9 +74,9 @@ export const projects = [
             "Admin dashboard with analytics",
             "Horizontal scaling capability"
         ],
-        github: "https://github.com/tuanthinh/ecommerce-microservices",
-        demo: "https://demo.ecommerce-platform.com",
-        category: "backend"
+        // github: "https://github.com/tuanthinh16/onni-shop-home",
+        demo: "https://oniishop.us/",
+        category: "fullstack"
     },
     {
         id: "proj-2",
@@ -135,40 +135,38 @@ export const projects = [
 // Skills Data
 export const skills = [
     // Programming Languages
-    { id: "skill-1", name: "Node.js", level: 95, category: "programming" },
-    { id: "skill-2", name: "Python", level: 90, category: "programming" },
-    { id: "skill-3", name: "Java", level: 85, category: "programming" },
-    { id: "skill-4", name: "Go", level: 80, category: "programming" },
-    { id: "skill-5", name: "TypeScript", level: 88, category: "programming" },
-    { id: "skill-6", name: "PHP", level: 75, category: "programming" },
+    { id: "skill-1", name: "PHP", category: "programming" },
+    { id: "skill-2", name: "C#", category: "programming" },
+    { id: "skill-3", name: "Python", category: "programming" },
+    { id: "skill-4", name: "Rust", category: "programming" },
+    { id: "skill-5", name: "JavaScript", category: "programming" },
+    { id: "skill-6", name: "ReactJS", category: "programming" },
+    { id: "skill-7", name: "NextJS", category: "programming" },
 
     // Frameworks
-    { id: "skill-7", name: "Express.js", level: 95, category: "framework" },
-    { id: "skill-8", name: "FastAPI", level: 85, category: "framework" },
-    { id: "skill-9", name: "Spring Boot", level: 80, category: "framework" },
-    { id: "skill-10", name: "Laravel", level: 75, category: "framework" },
-    { id: "skill-11", name: "NestJS", level: 82, category: "framework" },
+    { id: "skill-8", name: "Laravel", category: "framework" },
+    { id: "skill-9", name: ".NET", category: "framework" },
+    { id: "skill-10", name: "Flask", category: "framework" },
+
 
     // Databases
-    { id: "skill-12", name: "PostgreSQL", level: 90, category: "database" },
-    { id: "skill-13", name: "MongoDB", level: 85, category: "database" },
-    { id: "skill-14", name: "Redis", level: 88, category: "database" },
-    { id: "skill-15", name: "MySQL", level: 82, category: "database" },
-    { id: "skill-16", name: "Elasticsearch", level: 75, category: "database" },
+    { id: "skill-11", name: "MySQL", category: "database" },
+    { id: "skill-12", name: "Oracle", category: "database" },
+    { id: "skill-13", name: "Redis", category: "database" },
 
     // Cloud & DevOps
-    { id: "skill-17", name: "AWS", level: 85, category: "cloud" },
-    { id: "skill-18", name: "Docker", level: 90, category: "cloud" },
-    { id: "skill-19", name: "Kubernetes", level: 80, category: "cloud" },
-    { id: "skill-20", name: "Azure", level: 70, category: "cloud" },
-    { id: "skill-21", name: "GCP", level: 65, category: "cloud" },
+    { id: "skill-14", name: "Docker", category: "cloud" },
+    { id: "skill-15", name: "GitLab CI/CD", category: "cloud" },
+    { id: "skill-16", name: "Nginx", category: "cloud" },
+    { id: "skill-17", name: "Kubernetes", category: "cloud" },
+    { id: "skill-18", name: "VPS", category: "cloud" },
 
     // Tools
-    { id: "skill-22", name: "Git", level: 95, category: "tools" },
-    { id: "skill-23", name: "Jenkins", level: 85, category: "tools" },
-    { id: "skill-24", name: "Terraform", level: 75, category: "tools" },
-    { id: "skill-25", name: "Prometheus", level: 80, category: "tools" },
-    { id: "skill-26", name: "RabbitMQ", level: 82, category: "tools" }
+    { id: "skill-19", name: "Git", category: "tools" },
+    { id: "skill-20", name: "SVN", category: "tools" },
+    { id: "skill-21", name: "WebSocket", category: "tools" },
+    { id: "skill-22", name: "Kafka", category: "tools" },
+    { id: "skill-23", name: "TailwindCSS", category: "tools" },
 ];
 
 // Testimonials Data
@@ -209,24 +207,24 @@ export const uiContent = {
     about: {
         title: "Crafting Digital Excellence",
         subtitle: "I&apos;m passionate about building robust, scalable backend systems that power amazing user experiences.",
-        description1: "With over 5 years of experience in backend development, I specialize in creating high-performance, scalable server-side applications that handle millions of requests with ease.",
-        description2: "My expertise spans across multiple programming languages and frameworks, with a particular focus on Node.js, Python, and cloud technologies. I believe in writing clean, maintainable code that stands the test of time.",
+        description1: "With over 3 years of experience in backend development, I specialize in creating high-performance, scalable server-side applications using PHP, C#, Python, and more.",
+        description2: "My expertise spans across multiple programming languages and frameworks, with a particular focus on microservices, real-time systems, and DevOps tools. I believe in writing clean, maintainable code that stands the test of time.",
         description3: "When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing to open-source projects, or mentoring fellow developers. I&apos;m always eager to take on new challenges and push the boundaries of what&apos;s possible.",
         highlights: [
             {
                 icon: "Code",
-                title: "5+ Years Experience",
+                title: "3+ Years Experience",
                 description: "Building scalable backend systems"
             },
             {
                 icon: "Database",
                 title: "Database Expert",
-                description: "SQL & NoSQL optimization specialist"
+                description: "MySQL, Oracle, Redis optimization"
             },
             {
                 icon: "Cloud",
-                title: "Cloud Architecture",
-                description: "AWS, Azure, and GCP certified"
+                title: "DevOps & Tools",
+                description: "Docker, GitLab CI/CD, Kubernetes, Nginx, Cloudflare"
             },
             {
                 icon: "Zap",
@@ -235,8 +233,8 @@ export const uiContent = {
             },
             {
                 icon: "Users",
-                title: "Team Leadership",
-                description: "Leading development teams to success"
+                title: "System Design",
+                description: "Microservices and real-time architectures"
             },
             {
                 icon: "Award",
@@ -247,7 +245,7 @@ export const uiContent = {
     },
     hero: {
         greeting: "Hello, I&apos;m",
-        title: "Senior Backend Developer",
+        title: "Backend Developer",
         viewWork: "View My Work",
         getInTouch: "Get In Touch",
         scrollText: "Scroll to explore"

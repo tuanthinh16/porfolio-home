@@ -116,8 +116,8 @@ export default function Hero() {
                         variants={itemVariants}
                         className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white"
                     >
-                        <span className="block">Senior</span>
-                        <span className="text-gradient block">Backend Developer</span>
+                        <span className="block">Middle</span>
+                        <span className="text-gradient block">Fullstack Developer</span>
                     </motion.h1>
 
                     {/* Subtitle */}
@@ -154,7 +154,7 @@ export default function Hero() {
                             onClick={() => scrollToSection('contact')}
                             variant="outline"
                             size="lg"
-                            className="border-white/20 text-white hover:bg-white/10 px-8 py-3 text-lg font-medium transition-all duration-300 transform hover:scale-105"
+                            className="bg-gray-500 border-white/20 text-white hover:bg-white/10 px-8 py-3 text-lg font-medium transition-all duration-300 transform hover:scale-105"
                         >
                             Get In Touch
                         </Button>

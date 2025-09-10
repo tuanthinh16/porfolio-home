@@ -137,7 +137,7 @@ export default function Projects() {
                                                     <Button
                                                         size="sm"
                                                         variant="outline"
-                                                        className="border-white/50 text-white hover:bg-white/20"
+                                                        className="border-white/50 text-white hover:bg-white/20 bg-gray-600"
                                                         onClick={() => window.open(project.github, '_blank')}
                                                     >
                                                         <Github size={16} />
@@ -147,7 +147,7 @@ export default function Projects() {
                                                     <Button
                                                         size="sm"
                                                         variant="outline"
-                                                        className="border-white/50 text-white hover:bg-white/20"
+                                                        className="border-white/50 text-white hover:bg-white/20 bg-gray-600"
                                                         onClick={() => window.open(project.demo, '_blank')}
                                                     >
                                                         <ExternalLink size={16} />
@@ -243,7 +243,7 @@ export default function Projects() {
                         <Button
                             variant="outline"
                             size="lg"
-                            onClick={() => window.open('https://github.com', '_blank')}
+                            onClick={() => window.open('https://github.com/tuanthinh16', '_blank')}
                             className="group"
                         >
                             View All Projects on GitHub
