@@ -100,9 +100,15 @@ export default function Experience() {
                                                     </div>
 
                                                     {/* Description */}
-                                                    <p className="font-body text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                                                        {experience.description}
-                                                    </p>
+                                                    <p className="font-body text-gray-600 dark:text-gray-300 mb-6 leading-relaxed"
+                                                        dangerouslySetInnerHTML={{
+                                                            __html: experience.description
+                                                                .replace(/(\d+[\+\%]*\s*(?:stocks?|transactions?|orders?|users?|daily|microseconds?|accuracy|uptime|hospitals?|market))/gi, '<strong class="text-blue-600 dark:text-blue-400">$1</strong>')
+                                                                .replace(/(PHP Laravel|Node\.js|Rust|React\.js|Vue\.js|Soybean Admin|Kafka|TimescaleDB|PostgreSQL|C#\/\.NET|DevExpress|Oracle|Next\.js|WebSocket)/gi, '<strong class="text-purple-600 dark:text-purple-400">$1</strong>')
+                                                                .replace(/(real-time|stock trading|matching engine|microservices|frontend interfaces|e-commerce|Chinese market|backend|platform|serving|handling)/gi, '<strong class="text-green-600 dark:text-green-400">$1</strong>')
+                                                                .replace(/(Trinity Net Technology|Vietsens|backend|frontend|developer)/gi, '<strong class="text-red-600 dark:text-red-400">$1</strong>')
+                                                        }}
+                                                    />
 
                                                     {/* Technologies */}
                                                     <div className="mb-6">
@@ -132,7 +138,13 @@ export default function Experience() {
                                                             {experience.achievements.map((achievement, idx) => (
                                                                 <li key={idx} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300">
                                                                     <TrendingUp size={14} className="text-green-500 mt-0.5 flex-shrink-0" />
-                                                                    <span>{achievement}</span>
+                                                                    <span dangerouslySetInnerHTML={{
+                                                                        __html: achievement
+                                                                            .replace(/(\d+[\+\%]*\s*(?:stocks?|transactions?|orders?|users?|daily|microseconds?|accuracy|uptime|orders?\/day))/gi, '<strong class="text-blue-600 dark:text-blue-400">$1</strong>')
+                                                                            .replace(/(PHP Laravel|Node\.js|Rust|React\.js|Vue\.js|Soybean Admin|Kafka|TimescaleDB|PostgreSQL|C#\/\.NET|DevExpress|Oracle)/gi, '<strong class="text-purple-600 dark:text-purple-400">$1</strong>')
+                                                                            .replace(/(WebSocket|matching engine|CMS|encryption|digital signatures|Linux deployment|microservices|HIS\/LIS systems)/gi, '<strong class="text-green-600 dark:text-green-400">$1</strong>')
+                                                                            .replace(/(99%|1 microsecond|ultra-low latency|real-time|single-handedly|10,000\+|5000\+|1000\+|100\+)/gi, '<strong class="text-red-600 dark:text-red-400">$1</strong>')
+                                                                    }} />
                                                                 </li>
                                                             ))}
                                                         </ul>
@@ -169,50 +181,6 @@ export default function Experience() {
                         </div>
                     </div>
 
-                    {/* Summary Stats */}
-                    <motion.div
-                        variants={itemVariants}
-                        className="mt-20 grid md:grid-cols-3 gap-8"
-                    >
-                        <Card className="text-center border-0 shadow-lg bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20">
-                            <CardContent className="p-6">
-                                <motion.div
-                                    whileHover={{ scale: 1.05 }}
-                                    className="inline-flex items-center justify-center w-16 h-16 bg-blue-500 text-white rounded-full mb-4"
-                                >
-                                    <Users size={24} />
-                                </motion.div>
-                                <h3 className="font-heading text-2xl font-bold text-gray-900 dark:text-white mb-2">95%</h3>
-                                <p className="font-body text-gray-600 dark:text-gray-300">Happy Clients</p>
-                            </CardContent>
-                        </Card>
-
-                        <Card className="text-center border-0 shadow-lg bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20">
-                            <CardContent className="p-6">
-                                <motion.div
-                                    whileHover={{ scale: 1.05 }}
-                                    className="inline-flex items-center justify-center w-16 h-16 bg-purple-500 text-white rounded-full mb-4"
-                                >
-                                    <Code size={24} />
-                                </motion.div>
-                                <h3 className="font-heading text-2xl font-bold text-gray-900 dark:text-white mb-2">50+</h3>
-                                <p className="font-body text-gray-600 dark:text-gray-300">Projects Delivered</p>
-                            </CardContent>
-                        </Card>
-
-                        <Card className="text-center border-0 shadow-lg bg-gradient-to-br from-cyan-50 to-cyan-100 dark:from-cyan-900/20 dark:to-cyan-800/20">
-                            <CardContent className="p-6">
-                                <motion.div
-                                    whileHover={{ scale: 1.05 }}
-                                    className="inline-flex items-center justify-center w-16 h-16 bg-cyan-500 text-white rounded-full mb-4"
-                                >
-                                    <TrendingUp size={24} />
-                                </motion.div>
-                                <h3 className="font-heading text-2xl font-bold text-gray-900 dark:text-white mb-2">99.9%</h3>
-                                <p className="font-body text-gray-600 dark:text-gray-300">System Uptime</p>
-                            </CardContent>
-                        </Card>
-                    </motion.div>
                 </motion.div>
             </div>
         </section>

@@ -7,6 +7,7 @@ import ScrollProgress from '@/components/ScrollProgress';
 import LazyComponent, {
   LazyAbout,
   LazyExperience,
+  LazyFreelanceExperience,
   LazyProjects,
   LazySkills,
   LazyContact
@@ -28,8 +29,12 @@ export default function Home() {
       </LazyComponent>
 
       <LazyComponent>
-        <LazyProjects />
+        <LazyFreelanceExperience />
       </LazyComponent>
+
+      {/* <LazyComponent>
+        <LazyProjects />
+      </LazyComponent> */}
 
       <LazyComponent>
         <LazySkills />
