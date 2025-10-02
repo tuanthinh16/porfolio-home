@@ -1,14 +1,14 @@
 // Personal Information
 export const personalInfo = {
     name: "Do Tuan Thinh",
-    title: "Fullstack Developer",
+    title: "Backend & Frontend Developer",
     subtitle: "Building Scalable & Robust Server Solutions",
     description: "Backend Developer with 3+ years of experience building and scaling microservices using C#, PHP, and Python. Skilled in designing secure, high-performance systems for real-time trading (1000+ daily transactions) and healthcare platforms (serving thousands of users). Aspiring to take on system design leadership and explore blockchain integration in enterprise solutions. Dedicated to continuous learning and delivering scalable backend architectures.",
     email: "dotuanthinh37.work@gmail.com",
-    phone: "+84 (866) 145 769",
+    phone: "+84 (777) 087 862",
     location: "District 7, Ho Chi Minh City, Vietnam",
-    github: "https://github.com/tuanthinh",
-    linkedin: "https://linkedin.com/in/tuanthinh",
+    github: "https://github.com/tuanthinh16",
+    linkedin: "https://linkedin.com/in/tuanthinh16",
     resume: "/resume.pdf"
 };
 
@@ -16,30 +16,33 @@ export const personalInfo = {
 export const experiences = [
     {
         id: "exp-1",
-        title: "Fullstack Developer",
-        company: "Trinity Net Technology",
+        title: "Backend & Frontend Developer",
+        company: "Trinity Net Technology - Ho Chi Minh City, Vietnam",
         duration: "06/2025 - Present",
-        description: "Built and maintained a real-time trading platform handling 10000+ daily transactions using PHP (Laravel) and microservices, and developed an e-commerce website using Next.js and Laravel serving 500+ daily users.",
-        technologies: ["PHP", "Laravel", "Python", "Rust", "JavaScript", "Node.js", "Next.js", "MySQL", "Redis", "Docker", "Prometheus", "Grafana", "GitLab CI/CD", "Nginx", "Git", "SVN"],
+        description: "Developed and maintained a real-time stock trading platform handling 5000+ Chinese market stocks with 1000+ daily transactions using PHP Laravel backend, Node.js WebSocket services, and Rust matching engine. Built frontend interfaces with React.js and Vue.js, plus e-commerce platform serving 100+ daily orders.",
+        technologies: ["PHP", "Laravel", "Node.js", "Rust", "React.js", "Vue.js", "Soybean Admin", "JavaScript", "Nextjs", "Kafka", "TimescaleDB", "PostgreSQL", "WebSocket", "Linux", "Git", "Docker"],
         achievements: [
-            "Built and maintained a real-time trading platform handling 10000+ daily transactions using PHP (Laravel) and microservices.",
-            "Implemented WebSocket (Node.js) for near-instant market data updates with latency under 50ms.",
-            "Contributed to a high-speed matching engine in Rust, ensuring accurate and ultra-fast order execution.",
-            "Designed a secure API Gateway (RSA, OAuth2/JWT, API key, rate limiting) to protect system access.",
-            "Automated deployments with Docker, reducing release overhead and improving stability.",
-            "Established monitoring with Prometheus & Grafana to maintain 99.99% uptime in production.",
-            "Developed an e-commerce website using Next.js and Laravel, serving 500+ daily users with responsive design and efficient backend integration."
+            "Built and maintained a real-time stock trading platform handling 5000+ Chinese market stocks with 1000+ daily transactions using PHP Laravel backend architecture.",
+            "Implemented Node.js WebSocket services for real-time market data streaming and order processing with ultra-low latency.",
+            "Developed high-speed matching engine in Rust communicating via Kafka, achieving 99% accuracy and 1 microsecond processing time per order.",
+            "Created React.js frontend for stock trading platform, mapping real-time socket data and handling order placement functionality.",
+            "Single-handedly built CMS interface for stock platform using Vue.js and Soybean Admin framework.",
+            "Developed e-commerce platform frontend with Nextjs for US toy market, handling 100+ daily orders with responsive design.",
+            "Optimized matching engine system to achieve 99% accuracy and 1 microsecond processing speed per order.",
+            "Implemented encryption and digital signatures for enhanced data security and protection.",
+            "Gained expertise in Linux deployment and server management for production environments.",
+            "Learned and implemented TimescaleDB with PostgreSQL for handling large-scale market data storage and retrieval."
         ]
     },
     {
         id: "exp-2",
         title: "C# Developer",
-        company: "Vietsens",
-        duration: "03/2024 - 02/2025",
-        description: "Developed backend microservices in C#/.NET for hospital platforms serving 10,000+ daily users across major hospitals (Bệnh viện Chợ Rẫy, Bệnh viện Đại học Y Dược, etc.).",
-        technologies: ["C#", ".NET", "Oracle", "PL/SQL", "DevExpress", "Git", "SVN"],
+        company: "Vietsens - Ha Noi, Vietnam",
+        duration: "09/2023 - 03/2025",
+        description: "Developed backend microservices in C#/.NET for hospital platforms serving 10,000+ daily users across major hospitals (Bệnh viện Bạch Mai, Bệnh viện Đại học Y Dược, Bệnh viện Tim Hà Nội, Bệnh viện Thận Hà Nội, etc.).",
+        technologies: ["C#", ".NET", "Oracle", "SQL", "DevExpress", "Git", "SVN", "Flexcel"],
         achievements: [
-            "Developed backend microservices in C#/.NET for hospital platforms serving 10,000+ daily users across major hospitals (Bệnh viện Chợ Rẫy, Bệnh viện Đại học Y Dược, etc.).",
+            "Developed backend microservices in C#/.NET for hospital platforms serving 10,000+ daily users across major hospitals (Bệnh viện Bạch Mai, Bệnh viện Đại học Y Dược, Bệnh viện Tim Hà Nội, Bệnh viện Thận Hà Nội, etc.).",
             "Integrated with HIS/LIS systems, ensuring compatibility with existing healthcare workflows and standards.",
             "Designed reporting dashboards with DevExpress & Oracle to support real-time decision making in hospital departments.",
             "Optimized performance for large-scale hospital deployments, ensuring stability during high patient load."
@@ -153,6 +156,8 @@ export const skills = [
     { id: "skill-11", name: "MySQL", category: "database" },
     { id: "skill-12", name: "Oracle", category: "database" },
     { id: "skill-13", name: "Redis", category: "database" },
+    { id: "skill-24", name: "PostgreSQL", category: "database" },
+    { id: "skill-25", name: "MongoDB", category: "database" },
 
     // Cloud & DevOps
     { id: "skill-14", name: "Docker", category: "cloud" },
@@ -200,6 +205,7 @@ export const uiContent = {
         { name: 'Home', href: '#home' },
         { name: 'About', href: '#about' },
         { name: 'Experience', href: '#experience' },
+        { name: 'Freelance', href: '#freelance' },
         { name: 'Projects', href: '#projects' },
         { name: 'Skills', href: '#skills' },
         { name: 'Contact', href: '#contact' },
