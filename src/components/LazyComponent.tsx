@@ -29,6 +29,7 @@ export default function LazyComponent({ children, fallback = <DefaultFallback />
 // Lazy load components for better performance
 export const LazyAbout = lazy(() => import('@/components/About'));
 export const LazyExperience = lazy(() => import('@/components/Experience'));
+export const LazyFreelanceExperience = lazy(() => import('@/components/FreelanceExperience'));
 export const LazyProjects = lazy(() => import('@/components/Projects'));
 export const LazySkills = lazy(() => import('@/components/Skills'));
 export const LazyContact = lazy(() => import('@/components/Contact'));

@@ -18,7 +18,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tuan Thinh Do - Fullstack Developer | Portfolio",
+  title: "Tuan Thinh Do - Developer | Portfolio",
   description: "Passionate fullstack developer with 3+ years of experience in designing and implementing high-performance, scalable server-side applications. Specialized in microservices architecture, cloud technologies, and database optimization.",
   keywords: [
     "fullstack developer",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://dotuanthinh.id.vn",
-    title: "Tuan Thinh Do - Fullstack Developer",
+    title: "Tuan Thinh Do - Developer",
     description: "Passionate fullstack developer specializing in scalable server-side applications and microservices architecture.",
     siteName: "Tuan Thinh Do Portfolio",
     images: [
@@ -49,13 +49,13 @@ export const metadata: Metadata = {
         url: "/avt.jpg",
         width: 1200,
         height: 630,
-        alt: "Tuan Thinh Do - Fullstack Developer",
+        alt: "Tuan Thinh Do - Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tuan Thinh Do - Fullstack Developer",
+    title: "Tuan Thinh Do - Developer",
     description: "Passionate fullstack developer specializing in scalable server-side applications.",
     images: ["/avt.jpg"],
   },

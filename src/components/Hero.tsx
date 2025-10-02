@@ -117,7 +117,7 @@ export default function Hero() {
                         className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white"
                     >
                         <span className="block">Middle</span>
-                        <span className="text-gradient block">Fullstack Developer</span>
+                        <span className="text-gradient block">Backend & Frontend Developer</span>
                     </motion.h1>
 
                     {/* Subtitle */}
