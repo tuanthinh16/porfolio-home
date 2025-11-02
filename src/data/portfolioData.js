@@ -9,7 +9,8 @@ export const personalInfo = {
     location: "District 7, Ho Chi Minh City, Vietnam",
     github: "https://github.com/tuanthinh16",
     linkedin: "https://linkedin.com/in/tuanthinh16",
-    resume: "https://drive.google.com/file/d/1HA5_d3X9TLY0k0je13yEZhFhVyn_a4zK/view?usp=sharing"
+    resume: "https://drive.google.com/file/d/1HA5_d3X9TLY0k0je13yEZhFhVyn_a4zK/view?usp=sharing",
+    zalo: "0866145769"
 };
 
 // Experience Data

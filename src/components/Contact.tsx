@@ -131,6 +131,14 @@ export default function Contact() {
             description: 'Call for urgent matters'
         },
         {
+            icon: Phone,
+            title: 'Zalo',
+            value: personalInfo.zalo,
+            href: `https://zalo.me/${personalInfo.zalo}`,
+            color: 'from-green-500 to-green-600',
+            description: 'Message me on Zalo'
+        },
+        {
             icon: MapPin,
             title: 'Location',
             value: personalInfo.location,
@@ -290,8 +298,8 @@ export default function Contact() {
                                                 initial={{ opacity: 0, y: -10 }}
                                                 animate={{ opacity: 1, y: 0 }}
                                                 className={`p-4 rounded-lg border ${submitStatus.type === 'success'
-                                                        ? 'bg-green-500/20 border-green-500/30 text-green-200'
-                                                        : 'bg-red-500/20 border-red-500/30 text-red-200'
+                                                    ? 'bg-green-500/20 border-green-500/30 text-green-200'
+                                                    : 'bg-red-500/20 border-red-500/30 text-red-200'
                                                     }`}
                                             >
                                                 <div className="flex items-center gap-2">
@@ -409,36 +417,6 @@ export default function Contact() {
                             </Card>
                         </motion.div>
                     </div>
-
-                    {/* Call to Action */}
-                    <motion.div variants={itemVariants} className="text-center mt-16">
-                        <div className="max-w-2xl mx-auto">
-                            <h3 className="font-heading text-2xl font-bold text-white mb-4">
-                                Ready to Start Your Next Project?
-                            </h3>
-                            <p className="text-blue-200 mb-8">
-                                {"Let's discuss how I can help bring your ideas to life with robust, scalable backend solutions."}
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <Button
-                                    size="lg"
-                                    onClick={() => window.open(`mailto:${personalInfo.email}`, '_blank')}
-                                    className="bg-blue-600 hover:bg-blue-700 text-white border-0"
-                                >
-                                    <Mail className="mr-2 h-5 w-5" />
-                                    Email Me
-                                </Button>
-                                <Button
-                                    variant="outline"
-                                    size="lg"
-                                    onClick={() => window.open(personalInfo.resume, '_blank')}
-                                    className="border-white/20 text-white hover:bg-white/10"
-                                >
-                                    Download Resume
-                                </Button>
-                            </div>
-                        </div>
-                    </motion.div>
                 </motion.div>
             </div>
         </section>
