@@ -40,7 +40,7 @@ const freelanceProjects = [
             "Built role-based access control for different restaurant staff levels",
             "Handled on-site deployment and system setup training for restaurant staff"
         ],
-        budget: "$1,500 - $2,500",
+        budget: "$500",
         status: "Completed"
     },
     {
@@ -58,7 +58,7 @@ const freelanceProjects = [
             "Created admin dashboard for inventory and order management",
             "Optimized performance with Next.js SSR and image optimization"
         ],
-        budget: "$2,000 - $3,500",
+        budget: "$300",
         status: "Completed"
     },
     {
@@ -78,7 +78,7 @@ const freelanceProjects = [
         ],
         budget: "$100",
         status: "Live",
-        demo: "https://landing-inky-one.vercel.app/"
+        demo: "https://www.phatdatprecision.com/"
     }
 ];
 
