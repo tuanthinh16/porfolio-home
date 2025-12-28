@@ -1,15 +1,19 @@
 // Personal Information
 export const personalInfo = {
     name: "Do Tuan Thinh",
-    title: "Backend & Frontend Developer",
+    title: "Fullstack Developer (Backend-Oriented)",
     subtitle: "Building Scalable & Robust Server Solutions",
-    description: "Backend Developer with 3+ years of experience building and scaling microservices using C#, PHP, and Python. Skilled in designing secure, high-performance systems for real-time trading (1000+ daily transactions) and healthcare platforms (serving thousands of users). Aspiring to take on system design leadership and explore blockchain integration in enterprise solutions. Dedicated to continuous learning and delivering scalable backend architectures.",
+    description: (() => {
+        const currentYear = new Date().getFullYear();
+        const experienceYears = currentYear - 2021;
+        return `Fullstack Developer (<strong>Backend-Oriented</strong>) with <strong>${experienceYears} years</strong> of experience delivering <strong>backend-driven web and trading systems</strong>. Strong in <strong>API development</strong>, <strong>data processing pipelines</strong>, and <strong>real-time services</strong> using <strong>NodeJS</strong>, <strong>Python (Flask)</strong>, <strong>PHP/Laravel</strong>, <strong>NestJS</strong>, and <strong>C#</strong>. Experienced in <strong>market data crawling</strong>, <strong>kline aggregation</strong>, and integrating backend services with <strong>Vue.js</strong> and <strong>Next.js</strong> frontends. Comfortable with <strong>Linux</strong>, <strong>Docker</strong>, and manual deployment workflows. Looking for a stable middle-level fullstack position with backend focus, where I can contribute to production systems and gradually grow towards deeper system design responsibilities.`;
+    })(),
     email: "dotuanthinh37.work@gmail.com",
     phone: "+84 (777) 087 862",
     location: "District 7, Ho Chi Minh City, Vietnam",
     github: "https://github.com/tuanthinh16",
     linkedin: "https://linkedin.com/in/tuanthinh16",
-    resume: "https://drive.google.com/file/d/1HA5_d3X9TLY0k0je13yEZhFhVyn_a4zK/view?usp=sharing",
+    resume: "/CV_Dotuanthinh_12_2025_en.pdf",
     zalo: "0866145769"
 };
 
@@ -19,7 +23,7 @@ export const experiences = [
         id: "exp-1",
         title: "Backend & Frontend Developer",
         company: "Trinity Net Technology - Ho Chi Minh City, Vietnam",
-        duration: "06/2025 - Present",
+        duration: "05/2025 - Present",
         description: "Developed and maintained a real-time stock trading platform handling 5000+ Chinese market stocks with 1000+ daily transactions using PHP Laravel backend, Node.js WebSocket services, and Rust matching engine. Built frontend interfaces with React.js and Vue.js, plus e-commerce platform serving 100+ daily orders.",
         technologies: ["PHP", "Laravel", "Node.js", "Rust", "React.js", "Vue.js", "Soybean Admin", "JavaScript", "Nextjs", "Kafka", "TimescaleDB", "PostgreSQL", "WebSocket", "Linux", "Git", "Docker"],
         achievements: [
@@ -48,6 +52,22 @@ export const experiences = [
             "Designed reporting dashboards with DevExpress & Oracle to support real-time decision making in hospital departments.",
             "Optimized performance for large-scale hospital deployments, ensuring stability during high patient load."
         ]
+    },
+    {
+        id: "exp-3",
+        title: "Backend & Frontend Developer",
+        company: "Freelancer",
+        duration: "2021 - Present",
+        description: "Delivered freelance projects including SEO-optimized landing pages, stores, and dashboards using Next.js with SSR. Built backend services with Flask and NestJS for data processing, crawling, and API development. Implemented real-time features using WebSocket / Socket.IO with mock market data streams. Worked with PostgreSQL and MySQL, designing schemas and optimizing queries. Deployed systems on VPS using Docker, PM2, systemctl, and aaPanel, with manual Git-based deployments. Recent project: https://www.phatdatprecision.com/",
+        technologies: ["Next.js", "Flask", "NestJS", "WebSocket", "Socket.IO", "PostgreSQL", "MySQL", "Docker", "PM2"],
+        achievements: [
+            "Delivered freelance projects including SEO-optimized landing pages, stores, and dashboards using Next.js with SSR.",
+            "Built backend services with Flask and NestJS for data processing, crawling, and API development.",
+            "Implemented real-time features using WebSocket / Socket.IO with mock market data streams.",
+            "Worked with PostgreSQL and MySQL, designing schemas and optimizing queries.",
+            "Deployed systems on VPS using Docker, PM2, systemctl, and aaPanel, with manual Git-based deployments.",
+            "Recent project: https://www.phatdatprecision.com/"
+        ]
     }
 ];
 
@@ -57,7 +77,7 @@ export const education = [
         id: "edu-1",
         degree: "Bachelor of Information Technology",
         institution: "Danang Architecture University",
-        duration: "08/2018 - 02/2022",
+        duration: "08/2018 - 02/2023",
         description: "Specialized in software engineering, algorithms, and database systems."
     }
 ];
@@ -214,13 +234,21 @@ export const uiContent = {
     about: {
         title: "Crafting Digital Excellence",
         subtitle: "I&apos;m passionate about building robust, scalable backend systems that power amazing user experiences.",
-        description1: "With over 3 years of experience in backend development, I specialize in creating high-performance, scalable server-side applications using PHP, C#, Python, and more.",
-        description2: "My expertise spans across multiple programming languages and frameworks, with a particular focus on microservices, real-time systems, and DevOps tools. I believe in writing clean, maintainable code that stands the test of time.",
-        description3: "When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing to open-source projects, or mentoring fellow developers. I&apos;m always eager to take on new challenges and push the boundaries of what&apos;s possible.",
+        description1: (() => {
+            const currentYear = new Date().getFullYear();
+            const experienceYears = currentYear - 2021;
+            return `With over <strong>${experienceYears} years</strong> of experience in <strong>backend development</strong>, I specialize in creating <strong>high-performance</strong>, <strong>scalable server-side applications</strong> using <strong>PHP</strong>, <strong>C#</strong>, <strong>Python</strong>, and more.`;
+        })(),
+        description2: "My expertise spans across multiple <strong>programming languages</strong> and <strong>frameworks</strong>, with a particular focus on <strong>microservices</strong>, <strong>real-time systems</strong>, and <strong>DevOps tools</strong>. I believe in writing <strong>clean</strong>, <strong>maintainable code</strong> that stands the test of time.",
+        description3: "When I&apos;m not coding, you&apos;ll find me exploring <strong>new technologies</strong>, contributing to <strong>open-source projects</strong>, or mentoring fellow developers. I&apos;m always eager to take on <strong>new challenges</strong> and push the boundaries of what&apos;s possible.",
         highlights: [
             {
                 icon: "Code",
-                title: "3+ Years Experience",
+                title: (() => {
+                    const currentYear = new Date().getFullYear();
+                    const experienceYears = currentYear - 2021;
+                    return `${experienceYears}+ Years Experience`;
+                })(),
                 description: "Building scalable backend systems"
             },
             {
@@ -252,7 +280,7 @@ export const uiContent = {
     },
     hero: {
         greeting: "Hello, I&apos;m",
-        title: "Backend Developer",
+        title: "Fullstack Developer",
         viewWork: "View My Work",
         getInTouch: "Get In Touch",
         scrollText: "Scroll to explore"

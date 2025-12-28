@@ -85,7 +85,7 @@ export default function Hero() {
     };
 
     return (
-        <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        <section id="home" className="relative pt-20 min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
             {/* Three.js Background */}
             <div className="absolute inset-0 z-0">
                 <Canvas camera={{ position: [0, 0, 1] }}>
@@ -129,12 +129,11 @@ export default function Hero() {
                     </motion.p>
 
                     {/* Description */}
-                    <motion.p
+                    <motion.div
                         variants={itemVariants}
                         className="font-body text-lg text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
-                    >
-                        {personalInfo.description}
-                    </motion.p>
+                        dangerouslySetInnerHTML={{ __html: personalInfo.description }}
+                    />
 
                     {/* CTA Buttons */}
                     <motion.div
