@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://yourportfolio.com/sitemap.xml
+Sitemap: https://dotuanthinh.id.vn/sitemap.xml
 
 # Block any bot from crawling admin areas
 User-agent: *

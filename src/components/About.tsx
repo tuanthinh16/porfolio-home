@@ -100,17 +100,11 @@ export default function About() {
                             </h3>
 
                             <div className="space-y-4 text-gray-600 dark:text-gray-300">
-                                <p className="font-body text-lg leading-relaxed">
-                                    {uiContent.about.description1}
-                                </p>
+                                <div className="font-body text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: uiContent.about.description1 }} />
 
-                                <p className="font-body text-lg leading-relaxed">
-                                    {uiContent.about.description2}
-                                </p>
+                                <div className="font-body text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: uiContent.about.description2 }} />
 
-                                <p className="font-body text-lg leading-relaxed">
-                                    {uiContent.about.description3}
-                                </p>
+                                <div className="font-body text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: uiContent.about.description3 }} />
                             </div>
 
                             <motion.div
