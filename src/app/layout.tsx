@@ -18,9 +18,12 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Do Tuan Thinh - Fullstack Developer (Backend-Oriented) Portfolio",
-  description: "Fullstack Developer with 4 years of experience delivering backend-driven web and trading systems. Specializing in API development, data processing pipelines, and real-time services using NodeJS, Python, PHP/Laravel, NestJS, and C#.",
+  title: "Do Tuan Thinh - C# Fullstack Developer | Enterprise ERP",
+  description: "Do Tuan Thinh is a C# fullstack developer focused on enterprise ERP workflows, healthcare integrations and reliable business software.",
   keywords: [
+    'enterprise ERP',
+    'C# fullstack developer',
+    'business software',
     'backend developer',
     'fullstack developer',
     'software engineer',
@@ -38,7 +41,7 @@ export const metadata: Metadata = {
     'trading systems',
     'data processing',
     'Vietnamese developer',
-    'Ho Chi Minh City'
+    'Da Nang'
   ],
   authors: [{ name: 'Do Tuan Thinh' }],
   creator: 'Do Tuan Thinh',
@@ -49,7 +52,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://dotuanthinh.id.vn",
     title: "Do Tuan Thinh - Fullstack Developer Portfolio",
-    description: "Explore my portfolio showcasing expertise in backend and fullstack development with modern technologies.",
+    description: "Enterprise ERP solutions and reliable business software built by a C# fullstack developer.",
     siteName: "Do Tuan Thinh Portfolio",
     images: [
       {
@@ -63,7 +66,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Do Tuan Thinh - Fullstack Developer Portfolio',
-    description: 'Fullstack Developer specializing in backend-driven systems and real-time applications.',
+    description: 'C# fullstack developer building enterprise ERP and dependable business software.',
     images: ['/avt.jpg'],
     creator: '@dotuanthinh16',
   },
@@ -80,8 +83,6 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest",
 };
@@ -95,8 +96,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Do Tuan Thinh",
-    "jobTitle": "Fullstack Developer (Backend-Oriented)",
-    "description": "Fullstack Developer with 4 years of experience delivering backend-driven web and trading systems.",
+    "jobTitle": "C# Fullstack Developer",
+    "description": "Fullstack developer focused on enterprise ERP, healthcare integrations and reliable business software.",
     "url": "https://dotuanthinh.id.vn",
     "sameAs": [
       "https://github.com/tuanthinh16",
@@ -104,18 +105,21 @@ export default function RootLayout({
     ],
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Ho Chi Minh City",
+      "addressLocality": "Da Nang",
       "addressCountry": "Vietnam"
     },
     "knowsAbout": [
+      "Enterprise ERP",
+      "Business Operations",
+      "C#",
+      ".NET",
+      "Next.js",
       "Backend Development",
       "Fullstack Development",
       "Node.js",
       "Python",
       "PHP",
       "Laravel",
-      "C#",
-      ".NET",
       "Microservices",
       "Real-time Systems",
       "API Development"
@@ -123,10 +127,8 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -135,7 +137,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${outfit.variable} ${jetbrainsMono.variable} font-body antialiased`}
+        className={`${inter.variable} ${outfit.variable} ${jetbrainsMono.variable}`}
       >
         {children}
       </body>
