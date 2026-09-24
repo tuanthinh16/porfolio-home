@@ -12,7 +12,7 @@ export default function Hero() {
           <p className="hero-role">{profile.role}</p>
           <p className="hero-description">I build practical systems for business operations, with a focus on ERP and connected workflows. Currently building a multi-partner studio ERP at Luvina Software.</p>
           <div className="hero-actions">
-            <a className="button button-lime" href="#work">Explore my work <ArrowUpRight size={20} aria-hidden="true" /></a>
+            <a className="button button-lime" href="#experience">Explore my journey <ArrowUpRight size={20} aria-hidden="true" /></a>
             <a className="text-link text-link-light" href={`mailto:${profile.email}`}>Get in touch <MoveUpRight size={17} aria-hidden="true" /></a>
           </div>
         </div>
@@ -34,7 +34,7 @@ export default function Hero() {
       </div>
       <div className="site-shell hero-bottom">
         <span>BASED IN {profile.location.toUpperCase()}</span>
-        <a href="#work">SCROLL TO EXPLORE <ArrowDown size={16} aria-hidden="true" /></a>
+        <a href="#experience">RIDE THROUGH MY EXPERIENCE <ArrowDown size={16} aria-hidden="true" /></a>
       </div>
     </section>
   );

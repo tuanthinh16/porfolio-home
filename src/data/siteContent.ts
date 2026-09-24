@@ -8,9 +8,9 @@ export const profile = {
 };
 
 export const navigation = [
+  { label: "Experience", href: "#experience" },
   { label: "Work", href: "#work" },
   { label: "Expertise", href: "#skills" },
-  { label: "Experience", href: "#experience" },
   { label: "About", href: "#about" },
 ];
 

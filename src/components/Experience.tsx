@@ -21,6 +21,7 @@ export default function Experience() {
   const sectionRef = useRef<HTMLElement>(null);
   const sceneRef = useRef<HTMLDivElement>(null);
   const worldRef = useRef<HTMLDivElement>(null);
+  const backdropsRef = useRef<HTMLDivElement>(null);
   const bicycleRef = useRef<HTMLDivElement>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
@@ -47,6 +48,12 @@ export default function Experience() {
     world.style.transform = `translate3d(${-(position.x - landmarks[0].x) * scale}px, 0, 0)`;
     bicycle.style.transform = `translate3d(${position.x * scale}px, ${position.y * scene.clientHeight / roadmap.height}px, 0) translate(-50%, -${cyclistDimensions.ground / cyclistDimensions.height * 100}%) rotate(${rotation}deg)`;
     bicycle.style.opacity = "1";
+    const blend = Math.max(0, Math.min(1, (progress - .25) / .65));
+    Array.from(backdropsRef.current?.children ?? []).forEach((layer, layerIndex) => {
+      const element = layer as HTMLElement;
+      element.style.opacity = String(layerIndex === index ? 1 - blend : layerIndex === index + 1 ? blend : 0);
+      element.style.transform = `translate3d(${layerIndex === index ? -progress * 24 : (1 - progress) * 24}px, 0, 0)`;
+    });
   }, []);
 
   useEffect(() => {
@@ -167,16 +174,19 @@ export default function Experience() {
     <section id="experience" className="experience-section section-pad" aria-labelledby="experience-title" ref={sectionRef}>
       <div className="site-shell">
         <div className="experience-intro">
-          <div><span className="eyebrow dark-eyebrow">03 / THE JOURNEY</span><h2 id="experience-title">A winding road.<br /><em>Real work along the way.</em></h2></div>
+          <div><span className="eyebrow dark-eyebrow">01 / THE JOURNEY</span><h2 id="experience-title">A winding road.<br /><em>Real work along the way.</em></h2></div>
           <p>Begin with enterprise ERP today, then cycle back through trading, healthcare and independent projects. Press the right arrow once to ride to the next stop.</p>
         </div>
 
         <div className={`roadmap-scene${isLooping ? " is-looping" : ""}`} ref={sceneRef} role="group" aria-label="Career roadmap, newest to oldest">
+          <div className="roadmap-city-backdrops" ref={backdropsRef} aria-hidden="true">
+            {chapters.map((chapter, index) => <div className="roadmap-city-layer" key={chapter.slug} style={{ opacity: index === 0 ? 1 : 0 }}><RoadmapBackdrop city={chapter.locationId} /></div>)}
+          </div>
           <div className="roadmap-scene-label" aria-hidden="true"><span>NOW / {String(currentIndex + 1).padStart(2, "0")} OF {String(chapters.length).padStart(2, "0")}</span><span>→ INTO THE PAST</span></div>
           <div className="roadmap-world" ref={worldRef} style={{ width: `${roadmap.width / roadmap.viewportWidth * 100}%` }}>
             <svg className="roadmap-world-art" viewBox={`0 0 ${roadmap.width} ${roadmap.height}`} preserveAspectRatio="none" fill="none" aria-hidden="true">
               <defs><pattern id="roadmap-trees" width="220" height="180" patternUnits="userSpaceOnUse"><circle cx="24" cy="28" r="18" fill="#abc8ad" opacity=".45" /><circle cx="139" cy="119" r="15" fill="#a3bdac" opacity=".4" /><circle cx="26" cy="28" r="6" fill="#769e83" opacity=".35" /></pattern><pattern id="roadmap-grain" width="67" height="63" patternUnits="userSpaceOnUse"><circle cx="8" cy="14" r="1.2" fill="#315a4d" opacity=".15" /><circle cx="48" cy="42" r="1" fill="#315a4d" opacity=".14" /></pattern></defs>
-              <rect width={roadmap.width} height={roadmap.height} fill="#e3ece1" /><rect width={roadmap.width} height={roadmap.height} fill="url(#roadmap-trees)" /><rect width={roadmap.width} height={roadmap.height} fill="url(#roadmap-grain)" />
+              <rect width={roadmap.width} height={roadmap.height} fill="url(#roadmap-trees)" opacity=".3" /><rect width={roadmap.width} height={roadmap.height} fill="url(#roadmap-grain)" />
               <g fill="none" strokeLinecap="round" strokeLinejoin="round"><path d={roadmap.path} stroke="#a8c4ae" strokeWidth="101" /><path d={roadmap.path} stroke="#f5f6f1" strokeWidth="83" /><path d={roadmap.path} stroke="#647a70" strokeWidth="69" /><path d={roadmap.path} stroke="#758c80" strokeWidth="64" /><path d={roadmap.path} stroke="#e5e6cc" strokeWidth="2.5" strokeDasharray="16 17" /></g>
             </svg>
             <button className="roadmap-ride-zone" type="button" onClick={ride} aria-label={currentIndex === chapters.length - 1 ? "Return to the first chapter" : `Ride to ${chapters[currentIndex + 1].organization}`} />
@@ -185,6 +195,7 @@ export default function Experience() {
                 <span className="roadmap-waypoint" aria-hidden="true"><span>{String(index + 1).padStart(2, "0")}</span></span>
                 <a className="roadmap-card" href={`/experience/${chapter.slug}`} onClick={(event) => { event.preventDefault(); openChapter(index, event.currentTarget); }} aria-label={`Open chapter ${index + 1}: ${chapter.role} at ${chapter.organization}`}>
                   <span className="roadmap-card-index">STOP {String(index + 1).padStart(2, "0")} / {chapter.period}</span><strong>{chapter.organization}</strong><span className="roadmap-card-role">{chapter.role}</span><span className="roadmap-card-description">{chapter.summary}</span><span className="roadmap-card-open">Open chapter <ArrowUpRight size={17} aria-hidden="true" /></span>
+                  <span className="roadmap-card-location">{careerLocations[chapter.locationId].name}</span>
                 </a>
               </div>
             ))}
@@ -194,35 +205,42 @@ export default function Experience() {
               const from = chapter.locationId;
               const to = nextChapter.locationId;
               if (from === to || to === "unspecified" || from === "unspecified") return null;
-              const distance = careerRouteDistances[`${from}:${to}`] || careerRouteDistances[`${to}:${from}`] || 500;
+              const distance = careerRouteDistances[`${from}:${to}`] ?? careerRouteDistances[`${to}:${from}`];
               const nextLocation = careerLocations[to];
-              const signX = (landmarks[index].x + landmarks[index + 1].x) / 2;
-              const signY = Math.min(landmarks[index].y, landmarks[index + 1].y) - 60;
+              const position = roadmap.position(index, .42);
+              const signX = position.x;
+              const signY = position.y - 55;
               return (
                 <svg key={`sign-${chapter.slug}`} className="roadmap-sign" style={{ left: `${signX / roadmap.width * 100}%`, top: `${signY / roadmap.height * 100}%` }} viewBox="0 0 260 130" aria-hidden="true">
                   <rect x="0" y="0" width="260" height="102" rx="10" fill="#1a6b3c" />
-                  <path d="M198 51l30-28v56Z" fill="#fff" />
+                  <rect x="6" y="6" width="248" height="90" rx="6" fill="none" stroke="#fff" strokeWidth="2" />
+                  <path d="M194 43h28V30l22 21-22 21V59h-28Z" fill="#fff" />
                   <text x="22" y="42" fill="#fff" fontSize="22" fontWeight="700">{nextLocation?.signName ?? to.toUpperCase()}</text>
-                  <text x="22" y="78" fill="#ffffffcc" fontSize="15">{String(distance).replace(/\B(?=(\d{3})+(?!\d))/g, ".")} km</text>
+                  <text x="22" y="70" fill="#fff" fontSize="18">{distance === undefined ? "NEXT CITY" : `≈ ${distance.toLocaleString("vi-VN")} km`}</text>
+                  {distance !== undefined && <text x="22" y="87" fill="#fff" fontSize="10" letterSpacing="1.5"></text>}
                   <rect x="122" y="102" width="16" height="28" rx="3" fill="#5a5a5a" />
                 </svg>
               );
             })}
-            {chapters.map((chapter, index) => {
-              const city = chapter.locationId;
-              const position = landmarks[index];
-              return (
-                <div key={`bg-${chapter.slug}`} className="roadmap-backdrop" style={{ left: `${(position.x - 300) / roadmap.width * 100}%`, top: "0", width: `${600 / roadmap.width * 100}%`, height: "100%" }}>
-                  <RoadmapBackdrop city={city} />
-                </div>
-              );
-            })}
             <div className="roadmap-bicycle" ref={bicycleRef} style={{ transformOrigin: `50% ${cyclistDimensions.ground / cyclistDimensions.height * 100}%` }}><span>YOU ARE HERE</span><RoadmapCyclist riding={isRiding} /></div>
           </div>
+          <div className="roadmap-city-caption"><strong>{careerLocations[chapters[currentIndex].locationId].name}</strong><span>{careerLocations[chapters[currentIndex].locationId].landmark}</span></div>
         </div>
         <div className="roadmap-controls" role="status" aria-live="polite">
           <span>{isRiding ? `CYCLING TO ${chapters[Math.min(currentIndex + 1, chapters.length - 1)].organization.toUpperCase()}...` : currentIndex === chapters.length - 1 ? "AT THE BEGINNING · RIDE ONCE MORE TO RETURN TO NOW" : `STOP ${String(currentIndex + 1).padStart(2, "0")} / ${String(chapters.length).padStart(2, "0")} · ${chapters[currentIndex].organization.toUpperCase()}`}</span>
-          <span className="roadmap-control-hint"><kbd>→</kbd> RIDE <span aria-hidden="true">/</span> TAP THE ROAD</span>
+          <span className="roadmap-control-hint"><span className="roadmap-keyboard-hint"><kbd>→</kbd> RIDE / </span>TAP THE ROAD TO RIDE</span>
+        </div>
+        <div className="roadmap-mobile-chapters" aria-label="Current and next experience">
+          {chapters.slice(currentIndex, currentIndex + 2).map((chapter, offset) => (
+            <a key={chapter.slug} className={`roadmap-mobile-card${offset === 0 ? " is-current" : ""}`} href={`/experience/${chapter.slug}`} onClick={(event) => { event.preventDefault(); openChapter(currentIndex + offset, event.currentTarget); }}>
+              <span className="roadmap-card-index">{offset === 0 ? "CURRENT STOP" : "NEXT STOP"} · {chapter.period}</span>
+              <strong>{chapter.organization}</strong>
+              <span className="roadmap-card-location">{careerLocations[chapter.locationId].name}</span>
+              <span className="roadmap-card-role">{chapter.role}</span>
+              <span className="roadmap-card-description">{chapter.summary}</span>
+              <span className="roadmap-card-open">Open chapter <ArrowUpRight size={17} aria-hidden="true" /></span>
+            </a>
+          ))}
         </div>
       </div>
 
@@ -232,6 +250,7 @@ export default function Experience() {
             <div className="journey-dialog-main">
               <div className="journey-dialog-top"><span>CHAPTER {String(selectedIndex + 1).padStart(2, "0")} / {String(chapters.length).padStart(2, "0")}</span><button type="button" onClick={() => dialogRef.current?.close()} aria-label="Close chapter"><X size={23} aria-hidden="true" /></button></div>
               <div className="journey-dialog-content" key={selected.slug}>
+                <p className="roadmap-detail-location">{careerLocations[selected.locationId].name}</p>
                 <span className="eyebrow dark-eyebrow">{selected.domain} · {selected.period}</span><h2 id="journey-dialog-title" tabIndex={-1} ref={headingRef}>{selected.organization}<span className="accent-period">.</span></h2><p className="journey-dialog-role">{selected.role}</p><p className="journey-dialog-summary">{selected.context}</p>
                 <div className="journey-dialog-work"><span className="journey-label">THE WORK</span><ul>{selected.contributions.map((contribution) => <li key={contribution}>{contribution}</li>)}</ul></div>
                 <div className="journey-dialog-stack"><span className="journey-label">TECHNOLOGIES</span><p>{selected.technologies.join(" · ")}</p></div>

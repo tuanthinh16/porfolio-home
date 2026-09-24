@@ -6,7 +6,7 @@ export default function Skills() {
     <section id="skills" className="skills-section section-pad" aria-labelledby="skills-title">
       <div className="site-shell">
         <div className="section-heading skills-heading">
-          <div><span className="eyebrow">02 / WHAT I DO</span><h2 id="skills-title">Focused on what <em>makes it work.</em></h2></div>
+          <div><span className="eyebrow">03 / WHAT I DO</span><h2 id="skills-title">Focused on what <em>makes it work.</em></h2></div>
           <p>Core strengths up front, with the rest of my toolkit close behind.</p>
         </div>
         <div className="skills-grid">
