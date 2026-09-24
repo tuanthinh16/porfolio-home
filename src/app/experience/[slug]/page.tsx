@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { career, profile } from "@/data/siteContent";
+import { career, careerLocations, profile } from "@/data/siteContent";
 
 type ExperiencePageProps = { params: Promise<{ slug: string }> };
 const chapters = [...career].reverse();
@@ -44,7 +44,7 @@ export default async function ExperiencePage({ params }: ExperiencePageProps) {
               <span className="eyebrow dark-eyebrow">{String(index + 1).padStart(2, "0")} / THE JOURNEY · {experience.domain}</span>
               <h1>{experience.role}<span className="accent-period">.</span></h1>
             </div>
-            <div className="detail-intro"><span>{experience.period}</span><h2>{experience.organization}</h2><p>{experience.summary}</p></div>
+            <div className="detail-intro"><span>{experience.period} · {careerLocations[experience.locationId].name}</span><h2>{experience.organization}</h2><p>{experience.summary}</p></div>
           </div>
           <div className="detail-grid">
             <section aria-labelledby="detail-context"><span className="detail-label">01 / CONTEXT</span><h2 id="detail-context">The work behind<br />the work.</h2><p>{experience.context}</p></section>

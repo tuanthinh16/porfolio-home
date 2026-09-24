@@ -277,3 +277,71 @@ section[id] { scroll-margin-top: 78px; }
   --line: #c3d2c9;
   --focus: #aa4d28;
 }
+
+/* Added 2026-09-24: city scenery layers and roadside destination signs for the career journey. */
+.roadmap-city-backdrops { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.roadmap-city-layer { position: absolute; inset: 0 -24px; will-change: opacity, transform; }
+.roadmap-city-layer svg { display: block; width: 100%; height: 100%; }
+.roadmap-city-caption { position: absolute; z-index: 4; right: 24px; bottom: 18px; display: flex; flex-direction: column; gap: 3px; max-width: calc(100% - 48px); padding: 9px 13px; border: 1px solid var(--line); background: var(--surface); color: var(--deep-green); pointer-events: none; }
+.roadmap-city-caption strong { font-size: 14px; }
+.roadmap-city-caption span { font-size: 11px; }
+.roadmap-sign { position: absolute; z-index: 1; width: clamp(110px,15vw,194px); height: auto; overflow: visible; transform: translate(-50%, -100%); pointer-events: none; filter: drop-shadow(2px 3px 0 rgba(23,42,48,.12)); }
+.roadmap-card-location { order: -1; margin-bottom: 6px; color: var(--deep-green); font-size: 11px; font-weight: 700; }
+.roadmap-detail-location { margin-bottom: 14px; color: var(--deep-green); font-weight: 600; }
+@media (max-width: 640px) {
+  .roadmap-city-layer svg { width: 150%; max-width: none; margin-left: -50%; }
+  .roadmap-city-caption { right: 12px; bottom: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .roadmap-city-layer { will-change: auto; }
+}
+
+/* Added 2026-09-24: prominent journey, readable touch layouts and automatic mobile hero motion. */
+.roadmap-mobile-chapters { display: none; }
+.roadmap-keyboard-hint { display: inline-flex; align-items: center; gap: 10px; }
+@media (hover: none) and (prefers-reduced-motion: no-preference), (max-width: 600px) and (prefers-reduced-motion: no-preference) {
+  .hero-art .art-orbit-outer { animation: orbit-spin 12s linear infinite; }
+  .hero-art .art-orbit-middle { animation: orbit-reverse 8s linear infinite; }
+  .hero-art .art-orbit-inner { animation: orbit-spin 5s linear infinite; }
+  .hero-art .art-core { box-shadow: 0 0 30px color-mix(in srgb, var(--lime) 25%, transparent); }
+}
+@media (max-width: 600px) {
+  .site-shell { width: calc(100% - 32px); }
+  .section-pad { padding-block: 56px; }
+  .hero-layout { padding-block: 38px 28px; gap: 28px; }
+  .hero-copy h1 { margin-block: 22px 16px; }
+  .hero-role { font-size: 19px; }
+  .hero-description { font-size: 15px; line-height: 1.6; }
+  .hero-actions { margin-top: 24px; gap: 12px 20px; }
+  .hero-art { width: min(100%,260px); }
+  .art-index, .art-bottom { left: 12px; right: 12px; font-size: 8px; }
+  .art-node { padding: 6px; font-size: 8px; }
+  .hero-bottom { gap: 8px; padding-block: 12px; }
+  .hero-bottom a { min-height: 44px; }
+  .experience-intro { gap: 16px; margin-bottom: 24px; }
+  .experience-intro h2 { font-size: clamp(2.3rem,9vw,3.5rem); }
+  .experience-intro > p { font-size: 14px; line-height: 1.6; }
+  .roadmap-scene { height: 340px; }
+  .roadmap-world .roadmap-card { display: none; }
+  .roadmap-bicycle { width: 72px; }
+  .roadmap-bicycle > span { top: -16px; font-size: 7px; }
+  .roadmap-waypoint { top: -16px; left: -16px; width: 32px; height: 32px; border-width: 3px; font-size: 10px; }
+  .roadmap-sign { width: clamp(94px,27vw,130px); }
+  .roadmap-city-caption { padding: 7px 10px; }
+  .roadmap-controls { align-items: start; gap: 8px; padding-top: 14px; font-size: 10px; letter-spacing: .02em; }
+  .roadmap-controls > span { width: 100%; }
+  .roadmap-keyboard-hint { display: none; }
+  .roadmap-mobile-chapters { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; margin-top: 16px; }
+  .roadmap-mobile-card { display: flex; flex-direction: column; min-width: 0; padding: 14px 12px; border: 1px solid var(--line); background: var(--warm); }
+  .roadmap-mobile-card.is-current { border-color: var(--deep-green); background: var(--surface); box-shadow: inset 0 3px 0 var(--deep-green); }
+  .roadmap-mobile-card:only-child { grid-column: 1 / -1; }
+  .roadmap-mobile-card strong { margin: 12px 0 8px; font: 600 21px/1.1 var(--font-outfit),sans-serif; overflow-wrap: anywhere; }
+  .roadmap-mobile-card .roadmap-card-index { font-size: 10px; line-height: 1.6; }
+  .roadmap-mobile-card .roadmap-card-location { order: 0; font-size: 12px; }
+  .roadmap-mobile-card .roadmap-card-role, .roadmap-mobile-card .roadmap-card-description { font-size: 12px; }
+  .roadmap-mobile-card .roadmap-card-open { min-height: 44px; font-size: 12px; }
+  .journey-dialog-main { padding-bottom: max(32px, env(safe-area-inset-bottom)); }
+  .journey-dialog-side { padding-bottom: max(12px, env(safe-area-inset-bottom)); }
+  .contact-link { white-space: normal; overflow-wrap: anywhere; font-size: clamp(1.45rem,7vw,2rem); }
+  .detail-navigation { flex-wrap: wrap; }
+}

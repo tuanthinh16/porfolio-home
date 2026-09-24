@@ -7,7 +7,7 @@ export default function Work() {
     <section id="work" className="work-section section-pad" aria-labelledby="work-title">
       <div className="site-shell">
         <div className="section-heading work-heading">
-          <div><span className="eyebrow dark-eyebrow">01 / SELECTED WORK</span><h2 id="work-title">Built for the <em>real world.</em></h2></div>
+          <div><span className="eyebrow dark-eyebrow">02 / SELECTED WORK</span><h2 id="work-title">Built for the <em>real world.</em></h2></div>
           <p>Different problems. One approach: thoughtful systems that hold up beyond launch.</p>
         </div>
 
