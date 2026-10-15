@@ -1,26 +1,5 @@
-import Header from '@/components/Header';
-import Hero from '@/components/Hero';
-import Work from '@/components/Work';
-import Skills from '@/components/Skills';
-import Experience from '@/components/Experience';
-import About from '@/components/About';
-import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
+import DeveloperDashboard from '@/components/DeveloperDashboard';
 
 export default function Home() {
-  return (
-    <>
-      <a className="skip-link" href="#main">Skip to content</a>
-      <Header />
-      <main id="main">
-        <Hero />
-        <Experience />
-        <Work />
-        <Skills />
-        <About />
-        <Contact />
-      </main>
-      <Footer />
-    </>
-  );
+  return <DeveloperDashboard />;
 }

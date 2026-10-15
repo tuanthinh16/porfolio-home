@@ -1,11 +1,11 @@
 {
   "name": "Do Tuan Thinh - Portfolio",
-  "short_name": "JS Portfolio",
-  "description": "Middle Fullstack Developer Portfolio",
+  "short_name": "D.T.Thinh",
+  "description": "C# Fullstack Developer · Enterprise ERP Solutions",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#1e293b",
-  "theme_color": "#3b82f6",
+  "background_color": "#0c1018",
+  "theme_color": "#6be5f1",
   "orientation": "portrait-primary",
   "icons": [
     {
